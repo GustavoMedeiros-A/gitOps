@@ -44,7 +44,7 @@ jobs:
           kustomize edit set image goserver=$DOCKER_USERNAME/gitops:$GITHUB_SHA
 
       - name: Commit
-        run: 
+        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -am "Bump docker version"
