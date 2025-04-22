@@ -20,10 +20,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          tags: ${{ github.sha }}, latest
       - name: Build e Push da imagem
         id: docker_build
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: gutsmedeiros/gitops:latest
+          tags: ${{ github.sha }}, latest
