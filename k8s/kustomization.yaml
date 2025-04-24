@@ -8,4 +8,4 @@ resources:
 images:
 - name: goserver
   newName: gutsmedeiros/gitops
-  newTag: newtag
+  newTag: fd58f73e9e0c6ae6e4fb025ca093ffd4f8ba1983
